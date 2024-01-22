@@ -2,6 +2,9 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    color: #f4f4f4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
@@ -17,13 +20,17 @@ body{
     font-family: "TbcBolder";
     src: local("tbc"),
     url("public/fonts/TBCBolder.ttf") format("truetype");
+}@font-face {
+    font-family: "TBCMedium";
+    src: local("tbc"),
+    url("public/fonts/TBCMedium.ttf") format("truetype");
 }
-
-nav{
+#navigation{
     width: 100%;
     padding: 20px 0;
+    z-index: 1000;
 
-    background-color: rgb(26, 30, 31);
+    background-color: rgba(26, 30, 31,1);
     display: flex;
     align-items: center;
     /*justify-content: space-around;*/
@@ -31,18 +38,19 @@ nav{
     justify-content: center;
     gap: 350px;
     top: 0;
+    transition: background-color 0.4s ease;
 
 
 }
 
-nav img{
+
+#navigation img{
     height: 40px;
 }
 
 #links{
     width: 454px;
     /*background-color: red;*/
-
     color:white;
     display: flex;
     gap:48px;
@@ -99,8 +107,11 @@ nav img{
 #infoSection header span{
     margin-top: 8px;
     display: block;
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 400;
+    font-family: TbcHeader,sans-serif;
+    line-height: 67.2px;
+
 
 }
 
@@ -122,7 +133,6 @@ nav img{
     font-size: 28px;
     font-family: TbcRegular,sans-serif;
     margin-top: 0;
-    line-height: 44.8px;
     margin-bottom: 45px;
 }
 
@@ -137,7 +147,13 @@ nav img{
     text-decoration: none;
     color: rgb(0, 174, 243);
     font-size: 20px;
+    transition: color 0.4s;
     font-family: TbcBolder,sans-serif;
+}
+
+#sectionTextContainer a:hover{
+    color: #aaaa;
+
 }
 
 #coursesSection{
@@ -149,12 +165,78 @@ nav img{
 }
 
 .container{
+    padding-top:15px;
     width: 980px;
     /*background-color: red;*/
 
 }
 
 .container h2{
-    color: white;
+    color: #DBDBDB;
     font-family: TbcRegular,sans-serif;
+    font-weight: initial;
+}
+
+.container #coursesContainer{
+    margin-top: 66px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 38px;
+
+
+    /*background-color: red;*/
+}
+
+.courseCard{
+    /*margin-top: 23px;*/
+    box-sizing: border-box;
+    width: 300px;
+    height: 414px;
+    border: 1px solid #555555 ;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.courseCard section{
+    padding: 15px 20px;
+}
+.courseCard section p{
+    margin-top: 25px;
+    font-size: 14px;
+    font-family: TbcRegular,sans-serif;
+    font-weight: 400;
+
+}
+
+.courseCard section h3{
+    color: rgb(244, 244, 244);
+    font-size: 18px;
+    font-family: TbcRegular,sans-serif;
+    font-weight: initial;
+}
+
+.courseCard section a{
+    font-size: 16px;
+    text-decoration: none;
+    color: rgb(0, 174, 239);
+    font-family: TBCMedium,sans-serif;
+    /*font-weight: 400;*/
+    transition: color 0.4s ease;
+
+}
+.courseCard section a:hover{
+    color: #0080b0;
+}
+
+.courseLink{
+    display: flex;
+    align-items: center;
+    /*background-color: red;*/
+    position: absolute;
+    bottom: 30px;
+
 }
