@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -12,25 +12,31 @@ body{
     src: local("tbc"),
     url("public/fonts/TBCRegular.ttf") format("truetype");
 }
+
 @font-face {
     font-family: "TbcHeader";
     src: local("tbc"),
     url("public/fonts/TBCHeader.ttf") format("truetype");
-}@font-face {
+}
+
+@font-face {
     font-family: "TbcBolder";
     src: local("tbc"),
     url("public/fonts/TBCBolder.ttf") format("truetype");
-}@font-face {
+}
+
+@font-face {
     font-family: "TBCMedium";
     src: local("tbc"),
     url("public/fonts/TBCMedium.ttf") format("truetype");
 }
-#navigation{
+
+#navigation {
     width: 100%;
     padding: 20px 0;
     z-index: 1000;
 
-    background-color: rgba(26, 30, 31,1);
+    background-color: rgba(26, 30, 31, 1);
     display: flex;
     align-items: center;
     /*justify-content: space-around;*/
@@ -44,45 +50,46 @@ body{
 }
 
 
-#navigation img{
+#navigation img {
     height: 40px;
 }
 
-#links{
+#links {
     width: 454px;
     /*background-color: red;*/
-    color:white;
+    color: white;
     display: flex;
-    gap:48px;
+    gap: 48px;
     flex-shrink: 0;
     justify-content: flex-end;
     font-size: 14px;
     font-weight: 400;
-    font-family: TbcRegular,sans-serif;
+    font-family: TbcRegular, sans-serif;
 
 }
 
 
-.navLinks{
+.navLinks {
     cursor: pointer;
     transition: color 0.4s ease;
     margin: 0;
 }
 
-.navLinks:hover{
+.navLinks:hover {
     color: rgb(0, 163, 224);
 }
 
-.currentPage{
+.currentPage {
     color: rgb(0, 163, 224);
 }
 
 
-#infoSection{
+#infoSection {
     margin-top: 84px;
     margin-bottom: 0;
 }
-#infoSection header{
+
+#infoSection header {
     height: 352px;
     width: 100%;
     background-image: url("./public/HomeImage.webp");
@@ -96,26 +103,27 @@ body{
 
 }
 
-#infoSection header h1{
+#infoSection header h1 {
     margin: 0;
     margin-bottom: 40px;
     width: 980px;
     color: white;
-    font-family: TbcHeader,monospace;
+    font-family: TbcHeader, monospace;
     font-size: 42px;
 }
-#infoSection header span{
+
+#infoSection header span {
     margin-top: 8px;
     display: block;
     font-size: 34px;
     font-weight: 400;
-    font-family: TbcHeader,sans-serif;
+    font-family: TbcHeader, sans-serif;
     line-height: 67.2px;
 
 
 }
 
-#infoSection section{
+#infoSection section {
     margin: 0;
     width: 100%;
     height: 465px;
@@ -127,116 +135,205 @@ body{
     align-items: center;
 }
 
-#infoSection section p{
+#infoSection section p {
 
     color: white;
     font-size: 28px;
-    font-family: TbcRegular,sans-serif;
+    font-family: TbcRegular, sans-serif;
     margin-top: 0;
     margin-bottom: 45px;
 }
 
 
-#sectionTextContainer{
+#sectionTextContainer {
     width: 980px;
     margin: auto;
 }
 
-#sectionTextContainer a{
+#sectionTextContainer a {
     width: 25px;
     text-decoration: none;
     color: rgb(0, 174, 243);
     font-size: 20px;
     transition: color 0.4s;
-    font-family: TbcBolder,sans-serif;
+    font-family: TbcBolder, sans-serif;
 }
 
-#sectionTextContainer a:hover{
+#sectionTextContainer a:hover {
     color: #aaaa;
 
 }
 
-#coursesSection{
+#coursesSection {
     background-color: rgb(22, 22, 22);
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom: 57px;
 
 }
 
-.container{
-    padding-top:15px;
+.container {
+    padding-top: 15px;
     width: 980px;
     /*background-color: red;*/
 
 }
 
-.container h2{
+.container h2 {
     color: #DBDBDB;
-    font-family: TbcRegular,sans-serif;
+    font-family: TbcRegular, sans-serif;
     font-weight: initial;
 }
 
-.container #coursesContainer{
+.container #coursesContainer {
     margin-top: 66px;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
     gap: 38px;
 
 
     /*background-color: red;*/
 }
 
-.courseCard{
+.courseCard {
     /*margin-top: 23px;*/
     box-sizing: border-box;
     width: 300px;
     height: 414px;
-    border: 1px solid #555555 ;
+    border: 1px solid #555555;
     border-radius: 6px;
     overflow: hidden;
     position: relative;
 }
 
-.courseCard section{
+.courseCard section {
     padding: 15px 20px;
 }
-.courseCard section p{
+
+.courseCard section p {
     margin-top: 25px;
     font-size: 14px;
-    font-family: TbcRegular,sans-serif;
+    font-family: TbcRegular, sans-serif;
     font-weight: 400;
 
 }
 
-.courseCard section h3{
+.courseCard section h3 {
     color: rgb(244, 244, 244);
     font-size: 18px;
-    font-family: TbcRegular,sans-serif;
+    font-family: TbcRegular, sans-serif;
     font-weight: initial;
 }
 
-.courseCard section a{
+.courseCard section a {
     font-size: 16px;
     text-decoration: none;
     color: rgb(0, 174, 239);
-    font-family: TBCMedium,sans-serif;
+    font-family: TBCMedium, sans-serif;
     /*font-weight: 400;*/
     transition: color 0.4s ease;
 
 }
-.courseCard section a:hover{
+
+.courseCard section a:hover {
     color: #0080b0;
 }
 
-.courseLink{
+.courseLink {
     display: flex;
     align-items: center;
     /*background-color: red;*/
     position: absolute;
     bottom: 30px;
 
+}
+
+#partnersSection {
+    width: 100%;
+    background-color: #2b2b2b;
+    position: relative;
+    box-sizing: border-box;
+    height: 363px;
+    display: flex;
+    justify-content: center;
+}
+
+.partnersContainer {
+    max-width: 980px;
+    width: 80vw;
+    margin-top: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    /*gap:10vw;*/
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 1s ease;
+
+
+}
+
+#slider {
+    /*background-color: red;*/
+    display: flex;
+    margin: auto;
+    justify-content: center;
+
+}
+
+#buttonLeft {
+    left: 6vw;
+    width: 20px;
+
+}
+
+#buttonRight {
+    right: 6vw;
+    width: 20px;
+    transform: scaleX(-1);
+
+}
+
+.partnersButton{
+    top: 50%;
+    position: absolute;
+    stroke: white;
+    cursor: pointer;
+}
+
+.partnersButton:hover{
+    stroke: #969494;
+}
+
+#partners3{
+    justify-content: center;
+}
+
+#sliderBalls{
+    width: 54px;
+    height: 25px;
+    /*background-color: red;*/
+    margin: auto;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 75%;
+    left: 50%;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+
+}
+
+.ball{
+    background-color: white;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    cursor: pointer;
 }
