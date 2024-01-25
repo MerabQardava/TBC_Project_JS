@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        window.onscroll = () => {
+            let nav = document.getElementById("navigation");
+            if (window.scrollY > 0) {
+                nav.style.backgroundColor = "rgba(34, 34, 34, 0.95)"
+            } else {
+                nav.style.backgroundColor = "rgba(26, 30, 31,1)"
+            }
+        }
+
+
+
+    </script>
 </head>
 <body>
 <header>
     <nav id="navigation">
-        <a href=""><img src="public/TBCLogo.svg" alt="TBCLogo"/></a>
-        <div id="links">
-            <p class="navLinks">მთავარი</p>
-            <p class="navLinks">TBC IT</p>
-            <p class="navLinks currentPage">TBC x USAID</p>
-            <p class="navLinks">რისკები</p>
-        </div>
+        <section style="display: flex;width: 980px;justify-content: space-between;align-items: center;padding:0 50px">
+            <a href=""><img src="public/TBCLogo.svg" alt="TBCLogo"/></a>
+            <div id="links">
+                <p class="navLinks">მთავარი</p>
+                <p class="navLinks">TBC IT</p>
+                <p class="navLinks currentPage">TBC x USAID</p>
+                <p class="navLinks">რისკები</p>
+            </div>
+        </section>
     </nav>
 </header>
 
@@ -22,7 +43,7 @@
 
     <section id="infoSection">
         <header>
-            <h1>TBC x USAID <span>ტექნოლოგიური განათლებისთვის</span></h1>
+            <h1>TBC x USAID <span>ᲢᲔᲥᲜᲝᲚᲝᲒᲘᲣᲠᲘ ᲒᲐᲜᲐᲗᲚᲔᲑᲘᲡᲗᲕᲘᲡ</span></h1>
         </header>
 
         <section>
@@ -161,13 +182,18 @@
 
         <div class="container">
             <header>
-                <h2>პროექტის პარტნიორები</h2>
+                <h2 style="color: #f4f4f4;">პროექტის პარტნიორები</h2>
             </header>
 
 
-
-            <svg onclick="slideLeft()" id="buttonLeft" class="partnersButton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 41"><path  d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path></svg>
-            <svg onclick="slideRight()" id="buttonRight" class="partnersButton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 41"><path  d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path></svg>
+            <svg onclick="slideLeft()" id="buttonLeft" class="partnersButton" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 21 41">
+                <path d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path>
+            </svg>
+            <svg onclick="slideRight()" id="buttonRight" class="partnersButton" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 21 41">
+                <path d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path>
+            </svg>
 
             <div id="partners1" class="partnersContainer">
                 <img src="https://static.wixstatic.com/media/93e8a3_a356bb7d201f4f47870683655e9e4120~mv2.png/v1/fill/w_246,h_74,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%204_2x_edited.png"
@@ -199,63 +225,214 @@
         </div>
     </section>
 
+    <section id="questionsSection">
+        <div id="questionsContainer">
+            <header>
+                <h2>ხშირად დასმული კითხვები</h2>
+                <a href="">ყველა კითხვა</a>
+            </header>
+
+
+            <div id="questions">
+                <div class="question" style="max-height: 84px" id="question1">
+                    <section onclick="toggle(1)" class="questionName">
+                        <h3>როგორ ხდება კურსებზე რეგისტრაცია და შერჩევა?</h3>
+                        <img src="arrowDown.svg" alt="">
+                    </section>
+                    <br>
+                    <section class="expanded">
+                        <article>
+                            <header>
+                                კურსზე რეგისტრაციისთვის უნდა გაიარო რამდენიმე ეტაპი:
+                            </header>
+                            <main>
+                                <p>
+                                    <b>I ეტაპი</b> - პირველ ეტაპზე საჭიროა, შეავსო სასურველი კურსისთვის განკუთვნილი
+                                    სარეგისტრაციო
+                                    ფორმა, რომელიც განთავსებულია კურსის შიდა გვერდზე. კურსზე რეგისტრაციის დასრულების
+                                    შემდეგ
+                                    დაიწყება შემოსული განცხადებების გადარჩევა.
+                                </p>
+                                <p>
+                                    <b>II ეტაპი</b> - შერჩევის მეორე ეტაპი კურსების მიხედვით განსხვავებულია,
+                                    ზოგიერთი კურსისთვის მოიცავს პრე-ტესტს, ზოგიერთ კურსზე კი უნარების ტესტს, სადაც
+                                    მინიმალური ზღვარის გადალახვის შემთხვევაში გადახვალ შერჩევის შემდეგ ეტაპზე.
+                                </p>
+                                <p>
+                                    <b>III ეტაპი</b> - მესამე ეტაპი კურსების მიხედვით განსხვავდება: Advance კურსებზე,
+                                    სადაც
+                                    მოითხოვება გარკვეული ტექნიკური ცოდნა, მონაწილეებმა უნდა დაწერონ ტექნიკური ტესტი
+                                    ცოდნის დონის შესამოწმებლად, ხოლო კურსებზე, სადაც რაიმე ტიპის წინასწარი ცოდნა
+                                    მოთხოვნილი არ არის უნდა შეასრულოთ ტექნიკური დავალება, რაც თქვენი კვლევისა და
+                                    თვითსწავლის უნარს ამოწმებს.
+                                </p>
+                                <p>
+                                    <b>VI ეტაპი</b> - შერჩევის ბოლო მეოთხე ეტაპი მოიცავს გასაუბრებას შესარჩევ
+                                    კომისიასთან. გასაუბრების წარმატებით გავლის შემთხვევაში ჩაირიცხებით კურსზე და
+                                    გაფორმდება შესაბამისი ხელშეკრულება.
+                                </p>
+
+
+                            </main>
+                            * სანამ კურსზე დარეგისტრირდები მნიშვნელოვანია, ყურადღებით წაიკითხო კურსის აღწერა, ნახო
+                            რას ისწავლი კურსის განმავლობაში და გაიგო გააჩნია თუ არა კურსს დასწრების წინაპირობა.
+
+                        </article>
+                    </section>
+                </div>
+                <div class="question" style="max-height: 84px" id="question2">
+                    <section onclick="toggle(2)" class="questionName">
+                        <h3>შემიძლია თუ არა ერთზე მეტ კურსზე რეგისტრაცია?</h3>
+                        <img src="arrowDown.svg" alt="">
+                    </section>
+                    <br>
+                    <section class="expanded">
+                        <article>
+
+                            <header>TBC X USAID ტექნოლოგიური განათლებისთვის პროგრამაში თითოეულ კანდიდატს აქვს მხოლოდ
+                                ერთი კურსის
+                                გავლის შესაძლებლობა. გარდა Information Security და Python კურსებისა, სადაც Basic დონის
+                                გავლის შემდეგ შესაძლებელია სწავლის გაგრძელება Advance დონეზე.
+                            </header>
+                        </article>
+                    </section>
+                </div>
+                <div class="question" style="max-height: 84px" id="question3">
+                    <section onclick="toggle(3)" class="questionName">
+                        <h3>რა ღირს სწავლა პროგრამის ფარგლებში?</h3>
+                        <img src="arrowDown.svg" alt="">
+                    </section>
+                    <br>
+                    <section class="expanded">
+                        <article>
+
+                            <header>პროგრამის ფარგლებში კურსებზე სწავლა სრულიად დაფინანსებულია თიბისი ბანკისა და
+                                USAID-ის მიერ.
+                            </header>
+                        </article>
+                    </section>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
 
 </main>
+<footer>
+    <section>
+        <div>
+            <img src="https://static.wixstatic.com/media/dd97f4_86c58c47370442a889e9a4e9db4eb00c~mv2.png/v1/crop/x_1,y_0,w_426,h_123/fill/w_106,h_30,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%201%402x.png" alt="">
+            <p>© 2023 ყველა უფლება დაცულია</p>
+            <a href="">წესები და პირობები</a>
+        </div>
+        <div style="display: flex;flex-direction: column;justify-content: space-between">
+            <div style="display: flex;justify-content: flex-end">
+                <img src="https://static.wixstatic.com/media/ce6ec7c11b174c0581e20f42bb865ce3.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ce6ec7c11b174c0581e20f42bb865ce3.png" alt="">
+                <img src="https://static.wixstatic.com/media/71ac09a5a92848cc943bf2ca2a09a6d0.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/71ac09a5a92848cc943bf2ca2a09a6d0.png" alt="">
+            </div>
+            <button>მოგვწერეთ</button>
+        </div>
+
+    </section>
+
+</footer>
 
 
 <script>
 
-    let slide=1;
+    let slide = 1;
     let partners1 = document.getElementById("partners1");
     let partners2 = document.getElementById("partners2");
     let partners3 = document.getElementById("partners3");
 
+    let question1 = document.getElementById("question1")
+    let question2 = document.getElementById("question2")
+    let question3 = document.getElementById("question3")
+
+
     checkSlide()
 
-    function setSlide(num){
-        slide=num
-        checkSlide()
-    }
-    function checkSlide(){
-        if(slide===1){
-            partners1.style.opacity="100%"
-            partners2.style.opacity="0%"
-            partners3.style.opacity="0%"
-        }else if(slide===2){
-            partners2.style.opacity="100%"
-            partners1.style.opacity="0%"
-            partners3.style.opacity="0%"
-        }else if(slide===3){
-            partners2.style.opacity="0%"
-            partners1.style.opacity="0%"
-            partners3.style.opacity="100%"
-        }
-    }
-
-    function slideRight(){
-        if(slide+1>3){
-            slide=1
-        }else{
-            slide+=1
-        }
-        checkSlide()
-    }
-    function slideLeft(){
-        if(slide-1<1){
-            slide=3
-        }else{
-            slide-=1
-        }
+    function setSlide(num) {
+        slide = num
         checkSlide()
     }
 
-    window.onscroll = () => {
-        let nav = document.getElementById("navigation");
-        if (window.scrollY > 0) {
-            nav.style.backgroundColor = "rgba(34, 34, 34, 0.95)"
+    function checkSlide() {
+        if (slide === 1) {
+            partners1.style.opacity = "100%"
+            partners2.style.opacity = "0%"
+            partners3.style.opacity = "0%"
+        } else if (slide === 2) {
+            partners2.style.opacity = "100%"
+            partners1.style.opacity = "0%"
+            partners3.style.opacity = "0%"
+        } else if (slide === 3) {
+            partners2.style.opacity = "0%"
+            partners1.style.opacity = "0%"
+            partners3.style.opacity = "100%"
+        }
+    }
+
+    function slideRight() {
+        if (slide + 1 > 3) {
+            slide = 1
         } else {
-            nav.style.backgroundColor = "rgba(26, 30, 31,1)"
+            slide += 1
         }
+        checkSlide()
+    }
+    setInterval(slideRight,5000)
+
+    function slideLeft() {
+        if (slide - 1 < 1) {
+            slide = 3
+        } else {
+            slide -= 1
+        }
+        checkSlide()
+    }
+
+
+
+    function toggle(num) {
+
+        if (num === 1) {
+            if (question1.style.maxHeight === "84px") {
+                console.log(question1.style.maxHeight)
+                question1.style.maxHeight = "900px"
+                question1.querySelector("img").style.transform = "scaleY(-1)";
+            } else {
+                question1.style.maxHeight = "84px"
+                question1.querySelector("img").style.transform = "scaleY(1)";
+            }
+        }
+
+        if (num === 2) {
+            if (question2.style.maxHeight === "84px") {
+                // console.log(question2.style.maxHeight)
+                question2.style.maxHeight = "500px"
+                question2.querySelector("img").style.transform = "scaleY(-1)";
+            } else {
+                question2.style.maxHeight = "84px"
+                question2.querySelector("img").style.transform = "scaleY(1)";
+            }
+        }
+
+        if (num === 3) {
+            if (question3.style.maxHeight === "84px") {
+                console.log(question3.style.maxHeight)
+                question3.style.maxHeight = "300px"
+                question3.querySelector("img").style.transform = "scaleY(-1)";
+            } else {
+                question3.style.maxHeight = "84px"
+                question3.querySelector("img").style.transform = "scaleY(1)";
+            }
+        }
+
+
     }
 
 

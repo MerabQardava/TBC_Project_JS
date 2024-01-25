@@ -39,15 +39,17 @@ body {
     background-color: rgba(26, 30, 31, 1);
     display: flex;
     align-items: center;
-    /*justify-content: space-around;*/
+    justify-content: space-around;
     position: fixed;
-    justify-content: center;
-    gap: 350px;
+    /*justify-content: center;*/
+    /*gap: 350px;*/
     top: 0;
     transition: background-color 0.4s ease;
 
 
 }
+
+
 
 
 #navigation img {
@@ -57,6 +59,7 @@ body {
 #links {
     width: 454px;
     /*background-color: red;*/
+
     color: white;
     display: flex;
     gap: 48px;
@@ -177,6 +180,8 @@ body {
     padding-top: 15px;
     width: 980px;
     /*background-color: red;*/
+    padding-right: 25px;
+    padding-left: 25px;
 
 }
 
@@ -184,6 +189,7 @@ body {
     color: #DBDBDB;
     font-family: TbcRegular, sans-serif;
     font-weight: initial;
+
 }
 
 .container #coursesContainer {
@@ -337,3 +343,163 @@ body {
     border-radius: 50%;
     cursor: pointer;
 }
+
+
+#questionsSection{
+    width: 100%;
+    /*min-height:484px ;*/
+    background-color: rgb(22, 22, 22);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding: 85px 25px;
+
+}
+
+#questionsContainer{
+    width: 865px;
+
+    /*background-color: red;*/
+}
+
+#questionsContainer header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /*background-color: red;*/
+    align-items: center;
+    box-sizing: border-box;
+
+}
+
+#questionsContainer header h2{
+    color: #f4f4f4;
+    font-family: TbcRegular, sans-serif;
+    font-weight: 400;
+}
+
+#questionsContainer a {
+    /*background-color: yellowgreen;*/
+    text-decoration: none;
+    color: rgb(0, 174, 243);
+    font-size: 20px;
+    transition: color 0.4s;
+    font-family: TbcBolder, sans-serif;
+
+}
+
+#questionsContainer a:hover {
+    color: #aaaa;
+}
+
+#questions div{
+    border-bottom: 1px solid #353131;
+    /*padding: 10px;*/
+    overflow-y: hidden;
+
+}
+
+
+
+.question{
+    /*max-height:aut;*/
+    max-height: 84px;
+    height: auto;
+    transition: max-height 0.5s ease;
+
+}
+
+
+
+.questionName{
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.questionName img{
+    cursor: pointer;
+}
+
+#questions div h3{
+    color: rgb(244, 244, 244);
+    font-size: 18px;
+    font-family: TbcRegular, sans-serif;
+    font-weight: initial;
+    margin-top: 30px;
+}
+
+.closed{
+    width: 84px;
+}
+
+.expanded article{
+    font-family: TbcRegular, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 35px;
+}
+
+.expanded article main{
+    padding:25px 15px 0 25px;
+    line-height:28px;
+    margin-bottom: 50px;
+    /*background-color: red;*/
+}
+
+.expanded article header{
+    line-height:  28px;
+}
+
+
+footer{
+    background-color:#1a1e1f ;
+    width: 100%;
+    /*height: 500px;*/
+    display: flex;
+
+    padding: 64px 25px;
+    box-sizing: border-box;
+
+
+
+}
+
+footer section{
+    width: 980px;
+    display: flex;
+    /*background-color: yellowgreen;*/
+    margin: auto;
+    justify-content: space-between;
+    font-size: 14px;
+    font-family: TbcRegular,sans-serif;
+
+}
+
+footer section a{
+    font-size: 14px;
+    font-family: TbcRegular,sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+footer button{
+    padding:7px 32px;
+    border-radius: 6px;
+    border: none;
+    background-color: #00aef3;
+    color: white;
+    font-size: 16px;
+    font-family: TbcRegular,sans-serif;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+footer button:hover{
+    background-color: #d5d5d5;
+    color: #353131;
+}
+
+
+
