@@ -107,12 +107,13 @@ body {
 }
 
 #infoSection header h1 {
-    margin: 0;
-    margin-bottom: 40px;
+    padding: 25px;
+
     width: 980px;
     color: white;
     font-family: TbcHeader, monospace;
     font-size: 42px;
+    /*background-color: red;*/
 }
 
 #infoSection header span {
@@ -129,10 +130,10 @@ body {
 #infoSection section {
     margin: 0;
     width: 100%;
-    height: 465px;
+    /*height: 465px;*/
     background-color: rgb(43, 43, 43);
     box-sizing: border-box;
-    padding-top: 65px;
+    /*padding-top: 30px;*/
     /*display: flex;*/
     /*flex-direction: column;*/
     align-items: center;
@@ -149,6 +150,9 @@ body {
 
 
 #sectionTextContainer {
+    /*background-color: red;*/
+    line-height: 44.8px;
+    padding: 55px 25px;
     width: 980px;
     margin: auto;
 }
@@ -494,12 +498,13 @@ footer button{
     font-family: TbcRegular,sans-serif;
     cursor: pointer;
     transition: all 0.4s ease;
+    flex-shrink: 0;
+
 }
 
 footer button:hover{
     background-color: #d5d5d5;
     color: #353131;
 }
-
 
 
