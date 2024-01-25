@@ -31,6 +31,8 @@ body {
     url("public/fonts/TBCMedium.ttf") format("truetype");
 }
 
+/*navigation*/
+
 #navigation {
     width: 100%;
     padding: 20px 0;
@@ -81,6 +83,8 @@ body {
 .navLinks:hover {
     color: rgb(0, 163, 224);
 }
+
+/*info section*/
 
 .currentPage {
     color: rgb(0, 163, 224);
@@ -285,6 +289,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
     transition: opacity 1s ease;
+
+    /*background-color: red;*/
 
 
 }
@@ -507,4 +513,34 @@ footer button:hover{
     color: #353131;
 }
 
+
+@media only screen and (max-width: 980px) {
+
+    #partnersSection{
+        height: 450px;
+    }
+
+    .partnersContainer {
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 25px;
+        /*background-color: red;*/
+
+
+    }
+    #partners3{
+        top:175px;
+    }
+
+    #sliderBalls{
+        margin-top: 75px;
+    }
+
+    #partnersSection .container h2{
+        text-align: center;
+    }
+
+
+
+}
 
