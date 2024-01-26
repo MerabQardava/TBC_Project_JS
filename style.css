@@ -128,7 +128,6 @@ body {
     font-family: TbcHeader, sans-serif;
 
 
-
 }
 
 #infoSection section {
@@ -505,6 +504,15 @@ footer button {
 
 }
 
+#allQuestionsMobile {
+    margin-top: 35px;
+    width: 100%;
+    /*display: flex;*/
+    justify-content: center;
+    display: none;
+
+}
+
 footer button:hover {
     background-color: #d5d5d5;
     color: #353131;
@@ -512,6 +520,14 @@ footer button:hover {
 
 
 @media only screen and (max-width: 980px) {
+
+    #allQuestionsMobile{
+        display: flex;
+    }
+
+    #questionsContainer header a{
+        display: none;
+    }
 
     #partnersSection {
         height: 450px;
@@ -537,35 +553,34 @@ footer button:hover {
     }
 
 
-
-
-
-
 }
 
-@media only screen and (max-width: 688px){
-    .partnersButton{
+@media only screen and (max-width: 688px) {
+    .partnersButton {
         display: none;
     }
-    .courseCard{
+
+    .courseCard {
         height: 310px;
     }
-    .courseCard section{
+
+    .courseCard section {
         padding: 0 20px;
     }
-    .courseCard section p{
+
+    .courseCard section p {
         margin-top: 10px;
     }
 
-    .courseCard section h3{
+    .courseCard section h3 {
         font-size: 16px;
     }
 
-    .container #coursesContainer{
+    .container #coursesContainer {
         margin-top: 25px;
     }
 
-    #sectionTextContainer{
+    #sectionTextContainer {
         padding: 25px 25px;
     }
 
@@ -574,10 +589,15 @@ footer button:hover {
         line-height: 8vw;
         margin-bottom: 30px;
     }
+
 }
 
-@media only screen and (max-width: 470px){
-    #infoSection header h1{
+@media only screen and (max-width: 560px) {
+    #infoSection header h1 {
         text-align: center;
+    }
+
+    .question {
+        padding-bottom: 15px;
     }
 }

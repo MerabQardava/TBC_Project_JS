@@ -226,7 +226,7 @@
     </section>
 
     <section id="questionsSection">
-        <div id="questionsContainer">
+        <div  id="questionsContainer">
             <header>
                 <h2>ხშირად დასმული კითხვები</h2>
                 <a href="">ყველა კითხვა</a>
@@ -278,6 +278,7 @@
                             რას ისწავლი კურსის განმავლობაში და გაიგო გააჩნია თუ არა კურსს დასწრების წინაპირობა.
 
                         </article>
+
                     </section>
                 </div>
                 <div class="question" style="max-height: 84px" id="question2">
@@ -313,6 +314,9 @@
                         </article>
                     </section>
                 </div>
+            </div>
+            <div id="allQuestionsMobile">
+                <a  href="">ყველა კითხვა</a>
             </div>
 
 
@@ -404,7 +408,7 @@
         if (num === 1) {
             if (question1.style.maxHeight === "84px") {
                 // console.log(question1.style.maxHeight)
-                question1.style.maxHeight = "900px"
+                question1.style.maxHeight = "1500px"
                 question1.querySelector("img").style.transform = "scaleY(-1)";
             } else {
                 question1.style.maxHeight = "84px"
