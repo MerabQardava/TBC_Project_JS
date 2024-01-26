@@ -29,6 +29,16 @@
     <nav id="navigation">
         <section style="display: flex;width: 980px;justify-content: space-between;align-items: center;padding:0 50px">
             <a href=""><img src="public/TBCLogo.svg" alt="TBCLogo"/></a>
+            <div id="overlay"></div>
+            <div id="navMenu">
+                <div id="navMenuLinks">
+                    <p class="navLinks">მთავარი</p>
+                    <p class="navLinks">TBC IT</p>
+                    <p class="navLinks currentPage">TBC x USAID</p>
+                    <p class="navLinks">რისკები</p>
+                </div>
+            </div>
+
             <div id="links">
                 <p class="navLinks">მთავარი</p>
                 <p class="navLinks">TBC IT</p>
@@ -38,12 +48,12 @@
 
             <div onclick="burgerToggle()" id="burgerButton">
                 <div></div>
-
                 <div></div>
-
                 <div></div>
-
             </div>
+
+
+
         </section>
     </nav>
 </header>
@@ -79,7 +89,7 @@
                         <h3>iOS Development</h3>
                         <p>რეგისტრაცია დასრულებულია</p>
                         <div class="courseLink">
-                            <img style="margin-top:6px;margin-right:10px" src="arrowRight.svg" alt="">
+                            <img style="margin-top:6px;margin-right:10px" src="/public/arrowRight.svg" alt="">
                             <a href="">კურსის დეტალები</a>
                         </div>
                     </section>
@@ -91,7 +101,7 @@
                         <h3>React</h3>
                         <p>რეგისტრაცია დასრულებულია</p>
                         <div class="courseLink">
-                            <img style="margin-top:6px;margin-right:10px" src="arrowRight.svg" alt="">
+                            <img style="margin-top:6px;margin-right:10px" src="/public/arrowRight.svg" alt="">
                             <a href="">კურსის დეტალები</a>
                         </div>
                     </section>
@@ -103,7 +113,7 @@
                         <h3>Intro to Python</h3>
                         <p>რეგისტრაცია დასრულებულია</p>
                         <div class="courseLink">
-                            <img style="margin-top:6px;margin-right:10px" src="arrowRight.svg" alt="">
+                            <img style="margin-top:6px;margin-right:10px" src="/public/arrowRight.svg" alt="">
                             <a href="">კურსის დეტალები</a>
                         </div>
                     </section>
@@ -115,7 +125,7 @@
                         <h3>Advanced Python</h3>
                         <p>რეგისტრაცია დასრულებულია</p>
                         <div class="courseLink">
-                            <img style="margin-top:6px;margin-right:10px" src="arrowRight.svg" alt="">
+                            <img style="margin-top:6px;margin-right:10px" src="/public/arrowRight.svg" alt="">
                             <a href="">კურსის დეტალები</a>
                         </div>
                     </section>
@@ -127,7 +137,7 @@
                         <h3>Advanced Cybersecurity Course</h3>
                         <p>რეგისტრაცია დასრულებულია</p>
                         <div class="courseLink">
-                            <img style="margin-top:6px;margin-right:10px" src="arrowRight.svg" alt="">
+                            <img style="margin-top:6px;margin-right:10px" src="/public/arrowRight.svg" alt="">
                             <a href="">კურსის დეტალები</a>
                         </div>
                     </section>
@@ -139,7 +149,7 @@
                         <h3>ToT - Training of Trainers</h3>
                         <p>რეგისტრაცია დასრულებულია</p>
                         <div class="courseLink">
-                            <img style="margin-top:6px;margin-right:10px" src="arrowRight.svg" alt="">
+                            <img style="margin-top:6px;margin-right:10px" src="/public/arrowRight.svg" alt="">
                             <a href="">კურსის დეტალები</a>
                         </div>
                     </section>
@@ -151,7 +161,7 @@
                         <h3>Blockchain</h3>
                         <p>რეგისტრაცია დასრულებულია</p>
                         <div class="courseLink">
-                            <img style="margin-top:6px;margin-right:10px" src="arrowRight.svg" alt="">
+                            <img style="margin-top:6px;margin-right:10px" src="/public/arrowRight.svg" alt="">
                             <a href="">კურსის დეტალები</a>
                         </div>
                     </section>
@@ -163,7 +173,7 @@
                         <h3>DevOps</h3>
                         <p>რეგისტრაცია დასრულებულია</p>
                         <div class="courseLink">
-                            <img style="margin-top:6px;margin-right:10px" src="arrowRight.svg" alt="">
+                            <img style="margin-top:6px;margin-right:10px" src="/public/arrowRight.svg" alt="">
                             <a href="">კურსის დეტალები</a>
                         </div>
                     </section>
@@ -175,7 +185,7 @@
                         <h3>Information Security Governance</h3>
                         <p>რეგისტრაცია დასრულებულია</p>
                         <div class="courseLink">
-                            <img style="margin-top:6px;margin-right:10px" src="arrowRight.svg" alt="">
+                            <img style="margin-top:6px;margin-right:10px" src="/public/arrowRight.svg" alt="">
                             <a href="">კურსის დეტალები</a>
                         </div>
                     </section>
@@ -246,7 +256,7 @@
                 <div class="question" style="max-height: 84px" id="question1">
                     <section onclick="toggle(1)" class="questionName">
                         <h3>როგორ ხდება კურსებზე რეგისტრაცია და შერჩევა?</h3>
-                        <img src="arrowDown%20(2).svg" alt="">
+                        <img src="/public/arrowDown%20(2).svg" alt="">
                     </section>
                     <br>
                     <section class="expanded">
@@ -293,7 +303,7 @@
                 <div class="question" style="max-height: 84px" id="question2">
                     <section onclick="toggle(2)" class="questionName">
                         <h3>შემიძლია თუ არა ერთზე მეტ კურსზე რეგისტრაცია?</h3>
-                        <img src="arrowDown%20(2).svg" alt="">
+                        <img src="/public/arrowDown%20(2).svg" alt="">
                     </section>
                     <br>
                     <section class="expanded">
@@ -310,7 +320,7 @@
                 <div class="question" style="max-height: 84px" id="question3">
                     <section onclick="toggle(3)" class="questionName">
                         <h3>რა ღირს სწავლა პროგრამის ფარგლებში?</h3>
-                        <img src="arrowDown%20(2).svg" alt="">
+                        <img src="/public/arrowDown%20(2).svg" alt="">
 
                     </section>
                     <br>
@@ -359,9 +369,9 @@
 
     let slide = 1;
 
-    let partners1 = document.getElementById("partners1");
-    let partners2 = document.getElementById("partners2");
-    let partners3 = document.getElementById("partners3");
+    let partners1 = document.getElementById("partners1")
+    let partners2 = document.getElementById("partners2")
+    let partners3 = document.getElementById("partners3")
 
     let question1 = document.getElementById("question1")
     let question2 = document.getElementById("question2")
@@ -373,9 +383,15 @@
 
     const burgerToggle=()=>{
         if (burgerButton.classList.contains('clicked')) {
-            burgerButton.classList.remove('clicked');
+            burgerButton.classList.remove('clicked')
+            document.getElementById("overlay").classList.remove('clicked')
+            document.getElementById("navMenu").classList.remove('clickedMenu')
+            document.body.style.overflowY='auto'
         } else {
             burgerButton.classList.add('clicked');
+            document.getElementById("overlay").classList.add('clicked')
+            document.getElementById("navMenu").classList.add('clickedMenu')
+            document.body.style.overflowY='hidden'
         }
     };
 
