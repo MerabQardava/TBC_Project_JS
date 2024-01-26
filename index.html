@@ -35,6 +35,15 @@
                 <p class="navLinks currentPage">TBC x USAID</p>
                 <p class="navLinks">რისკები</p>
             </div>
+
+            <div onclick="burgerToggle()" id="burgerButton">
+                <div></div>
+
+                <div></div>
+
+                <div></div>
+
+            </div>
         </section>
     </nav>
 </header>
@@ -358,8 +367,18 @@
     let question2 = document.getElementById("question2")
     let question3 = document.getElementById("question3")
 
+    let burgerButton=document.getElementById("burgerButton")
 
     checkSlide()
+
+    const burgerToggle=()=>{
+        if (burgerButton.classList.contains('clicked')) {
+            burgerButton.classList.remove('clicked');
+        } else {
+            burgerButton.classList.add('clicked');
+        }
+    };
+
 
     function setSlide(num) {
         slide = num
