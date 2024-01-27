@@ -8,7 +8,6 @@ body {
 }
 
 
-
 @font-face {
     font-family: "TbcRegular";
     src: local("tbc"),
@@ -223,6 +222,7 @@ body {
     border-radius: 6px;
     overflow: hidden;
     position: relative;
+
 }
 
 .courseCard section {
@@ -290,11 +290,13 @@ body {
     left: 50%;
     transform: translateX(-50%);
     transition: opacity 1s ease;
-
+    opacity: 100%;
     /*background-color: red;*/
 
 
 }
+
+
 
 #slider {
     /*background-color: red;*/
@@ -328,7 +330,10 @@ body {
     stroke: #969494;
 }
 
+
+
 #partners3 {
+    /*left: 50%;*/
     justify-content: center;
 }
 
@@ -348,7 +353,7 @@ body {
 }
 
 .ball {
-    background-color: white;
+    background-color: white !important;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -520,7 +525,7 @@ footer button:hover {
     color: #353131;
 }
 
-#burgerButton{
+#burgerButton {
     width: 30px;
     height: 30px;
     /*background-color: red;*/
@@ -532,22 +537,21 @@ footer button:hover {
 
 }
 
-#burgerButton > *{
+#burgerButton > * {
     transition: all 0.6s ease;
 }
 
 
-
-
-#burgerButton>:first-child {
-    transform-origin:center left;
+#burgerButton > :first-child {
+    transform-origin: center left;
     background-color: #525050;
     width: 50%;
     height: 4px;
     border-radius: 2px;
     position: absolute;
 }
-#burgerButton>:nth-child(2) {
+
+#burgerButton > :nth-child(2) {
     background-color: #525050;
     width: 100%;
     height: 4px;
@@ -559,7 +563,7 @@ footer button:hover {
     transform-origin: center center;
 }
 
-#burgerButton>:nth-child(3) {
+#burgerButton > :nth-child(3) {
     background-color: #525050;
     width: 50%;
     height: 4px;
@@ -567,23 +571,26 @@ footer button:hover {
     position: absolute;
     bottom: 0;
     right: 0;
-    transform-origin:center right;
+    transform-origin: center right;
 }
 
-.clicked>:first-child{
+.clicked > :first-child {
     transform: rotate(45deg);
-    left:4px ;
+    left: 4px;
     top: 3px;
 }
-.clicked>:nth-child(2){
+
+.clicked > :nth-child(2) {
     transform: rotate(-45deg) !important;
 }
-.clicked>:nth-child(3){
+
+.clicked > :nth-child(3) {
     transform: rotate(45deg) !important;
     left: 35% !important;
     top: 82%;
 }
-#overlay{
+
+#overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -593,14 +600,15 @@ footer button:hover {
     /*display: none;*/
     z-index: 2;
     transition: all 0.5s ease;
-    pointer-events:none;
+    pointer-events: none;
 }
-#overlay.clicked{
+
+#overlay.clicked {
     pointer-events: all;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-#navMenu{
+#navMenu {
     position: fixed;
     top: 0;
     right: -55%;
@@ -611,11 +619,11 @@ footer button:hover {
     z-index: 3;
 }
 
-#navMenu.clickedMenu{
+#navMenu.clickedMenu {
     right: 0;
 }
 
-#navMenuLinks{
+#navMenuLinks {
     display: flex;
     flex-direction: column;
     color: white;
@@ -627,17 +635,30 @@ footer button:hover {
     font-weight: 400;
 }
 
-
-
-
-
+@media only screen and (min-width: 981px){
+    #partners2{
+        left: 50% !important;
+    }    #partners3{
+        left: 50% !important;
+    }    #partners1{
+        left: 50% !important;
+    }
+}
 @media only screen and (max-width: 980px) {
 
-    #allQuestionsMobile{
+    .partnersButton{
+        display: none;
+    }
+
+    #questionsContainer header {
+        justify-content: center;
+    }
+
+    #allQuestionsMobile {
         display: flex;
     }
 
-    #questionsContainer header a{
+    #questionsContainer header a {
         display: none;
     }
 
@@ -650,10 +671,31 @@ footer button:hover {
         gap: 25px;
         margin-top: 25px;
         /*background-color: red;*/
+        transform: translateX(-50%);
+        transition: left 1s ease;
+        opacity: 100%;
+
     }
 
+
     #partners3 {
+        /*position: absolute;*/
         top: 175px;
+        opacity: 100% !important;
+
+        left: 150vw;
+    }
+
+    #partners2{
+        opacity: 100% !important;
+        left: 150vw;
+
+    }
+
+    #partners1 {
+        left: 50%;
+        opacity: 100% !important;
+
     }
 
     #sliderBalls {
@@ -669,11 +711,16 @@ footer button:hover {
 
 @media only screen and (max-width: 688px) {
 
-    #burgerButton{
+    #navigation section {
+        /*background-color: red;*/
+        padding: 0 25px !important;
+    }
+
+    #burgerButton {
         display: block;
     }
 
-    #links{
+    #links {
         display: none;
     }
 

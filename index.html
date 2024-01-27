@@ -29,7 +29,7 @@
     <nav id="navigation">
         <section style="display: flex;width: 980px;justify-content: space-between;align-items: center;padding:0 50px">
             <a href=""><img src="public/TBCLogo.svg" alt="TBCLogo"/></a>
-            <div id="overlay"></div>
+            <div onclick="burgerToggle()" id="overlay"></div>
             <div id="navMenu">
                 <div id="navMenuLinks">
                     <p class="navLinks">მთავარი</p>
@@ -402,18 +402,40 @@
     }
 
     function checkSlide() {
-        if (slide === 1) {
-            partners1.style.opacity = "100%"
-            partners2.style.opacity = "0%"
-            partners3.style.opacity = "0%"
-        } else if (slide === 2) {
-            partners2.style.opacity = "100%"
-            partners1.style.opacity = "0%"
-            partners3.style.opacity = "0%"
-        } else if (slide === 3) {
-            partners2.style.opacity = "0%"
-            partners1.style.opacity = "0%"
-            partners3.style.opacity = "100%"
+        console.log(slide)
+        if(window.innerWidth<981){
+            console.log(window.getComputedStyle(document.querySelector(".partnersContainer")).getPropertyValue('flex-direction'))
+            if (slide === 1) {
+                partners1.style.left="50%"
+                partners2.style.left="200vw"
+                partners3.style.left="250vw"
+
+            } else if (slide === 2) {
+                partners1.style.left="-50vw"
+                partners2.style.left="50%"
+                partners3.style.left="200vw"
+
+            } else if (slide === 3) {
+                partners1.style.left="-75vw"
+                partners2.style.left="-50vw"
+                partners3.style.left="50%"
+
+            }
+
+        }else{
+            if (slide === 1) {
+                partners1.style.opacity = "100%"
+                partners2.style.opacity = "0%"
+                partners3.style.opacity = "0%"
+            } else if (slide === 2) {
+                partners2.style.opacity = "100%"
+                partners1.style.opacity = "0%"
+                partners3.style.opacity = "0%"
+            } else if (slide === 3) {
+                partners2.style.opacity = "0%"
+                partners1.style.opacity = "0%"
+                partners3.style.opacity = "100%"
+            }
         }
     }
 
@@ -425,7 +447,8 @@
         }
         checkSlide()
     }
-    setInterval(slideRight,5000)
+
+    // setInterval(slideRight,5000)
 
     function slideLeft() {
         if (slide - 1 < 1) {
