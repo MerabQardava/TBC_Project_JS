@@ -11,14 +11,7 @@
     <link rel="stylesheet" href="style.css">
 
     <script>
-        window.onscroll = () => {
-            let nav = document.getElementById("navigation");
-            if (window.scrollY > 0) {
-                nav.style.backgroundColor = "rgba(34, 34, 34, 0.95)"
-            } else {
-                nav.style.backgroundColor = "rgba(26, 30, 31,1)"
-            }
-        }
+
 
 
 
@@ -381,6 +374,35 @@
 
     checkSlide()
 
+
+
+    let prevScrollPos = window.scrollY;
+
+    // console.log(window.innerWidth)
+    window.onscroll = () => {
+
+        let nav = document.getElementById("navigation");
+
+        if(window.innerWidth<689){
+
+            const currentScrollPos = window.scrollY;
+            if (prevScrollPos > currentScrollPos) {
+                nav.style.top="0px";
+                nav.classList.add('show');
+            } else{
+                nav.style.top="-85px";
+            }
+            prevScrollPos=currentScrollPos
+        }
+
+        if (window.scrollY > 0) {
+            nav.style.backgroundColor = "rgba(34, 34, 34, 0.95)"
+        } else {
+            nav.style.backgroundColor = "rgba(26, 30, 31,1)"
+        }
+    }
+
+
     const burgerToggle=()=>{
         if (burgerButton.classList.contains('clicked')) {
             burgerButton.classList.remove('clicked')
@@ -402,9 +424,9 @@
     }
 
     function checkSlide() {
-        console.log(slide)
+        // console.log(slide)
         if(window.innerWidth<981){
-            console.log(window.getComputedStyle(document.querySelector(".partnersContainer")).getPropertyValue('flex-direction'))
+            // console.log(window.getComputedStyle(document.querySelector(".partnersContainer")).getPropertyValue('flex-direction'))
             if (slide === 1) {
                 partners1.style.left="50%"
                 partners2.style.left="200vw"
@@ -487,7 +509,7 @@
 
         if (num === 3) {
             if (question3.style.maxHeight === "84px") {
-                console.log(question3.style.maxHeight)
+                // console.log(question3.style.maxHeight)
                 question3.style.maxHeight = "300px"
                 question3.querySelector("img").style.transform = "scaleY(-1)";
             } else {
