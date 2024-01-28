@@ -376,12 +376,15 @@
 
     let prevScrollPos = window.scrollY;
 
-    // console.log(window.innerWidth)
-    window.onscroll = () => {
 
+
+    // listens to scroll changes
+    window.onscroll = () => {
 
         let nav = document.getElementById("navigation");
 
+        // checks if you are scrolling up or down
+        // and hides or shows the navbar
         if(window.innerWidth<689){
 
             const currentScrollPos = window.scrollY;
@@ -394,6 +397,7 @@
             prevScrollPos=currentScrollPos
         }
 
+        // changes the navbar background depending on if you have scrolled down or not
         if (window.scrollY > 0) {
             nav.style.backgroundColor = "rgba(34, 34, 34, 0.95)"
         } else {
@@ -402,7 +406,7 @@
         }
     }
 
-
+    // toggles hamburger menu button for mobile navigation
     const burgerToggle=()=>{
         if (burgerButton.classList.contains('clicked')) {
             burgerButton.classList.remove('clicked')
@@ -417,12 +421,13 @@
         }
     };
 
-
+    // sets slide to the provided number and updates it
     function setSlide(num) {
         slide = num
         checkSlide()
     }
 
+    // updates the slide and resets the timer
     function checkSlide() {
         clearInterval(timer)
         timer=setInterval(slideRight,5000)
@@ -463,6 +468,7 @@
         }
     }
 
+    // moves slider to the right
     function slideRight() {
         if (slide + 1 > 3) {
             slide = 1
@@ -472,10 +478,7 @@
         checkSlide()
     }
 
-
-
-
-
+    // moves slider to the left
     function slideLeft() {
         if (slide - 1 < 1) {
             slide = 3
@@ -486,13 +489,13 @@
     }
 
 
-
+    // toggles the provided question
     function toggle(num) {
 
         if (num === 1) {
             if (question1.style.maxHeight === "84px") {
                 // console.log(question1.style.maxHeight)
-                question1.style.maxHeight = "1500px"
+                question1.style.maxHeight = "1600px"
                 question1.querySelector("img").style.transform = "scaleY(-1)";
             } else {
                 question1.style.maxHeight = "84px"
