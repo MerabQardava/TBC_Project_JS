@@ -368,6 +368,8 @@
 
     let burgerButton=document.getElementById("burgerButton")
 
+    let timer=setInterval(slideRight,5000)
+
     checkSlide()
 
 
@@ -422,6 +424,8 @@
     }
 
     function checkSlide() {
+        clearInterval(timer)
+        timer=setInterval(slideRight,5000)
         // console.log(slide)
         if(window.innerWidth<981){
             // console.log(window.getComputedStyle(document.querySelector(".partnersContainer")).getPropertyValue('flex-direction'))
@@ -468,7 +472,9 @@
         checkSlide()
     }
 
-    // setInterval(slideRight,5000)
+
+
+
 
     function slideLeft() {
         if (slide - 1 < 1) {
